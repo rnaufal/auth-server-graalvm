@@ -10,7 +10,7 @@ This is an authentication server built with Spring Boot and optimized for GraalV
 
 ## Technologies
 
-- Spring Boot
+- Spring Boot 3.5.3
 - GraalVM Native Image
 - Spring Security
 - Gradle
