@@ -46,6 +46,8 @@ jobs:
     permissions:
       checks: write
       actions: read
+      issues: write
+      pull-requests: write
     needs: code-quality
 
     steps:
