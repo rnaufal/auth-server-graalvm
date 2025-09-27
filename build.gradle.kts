@@ -3,6 +3,7 @@ plugins {
 	id("org.springframework.boot") version "3.5.3"
 	id("io.spring.dependency-management") version "1.1.7"
 	id("org.graalvm.buildtools.native") version "0.10.6"
+	id("com.diffplug.spotless") version "8.0.0"
 }
 
 group = "com.rnaufal"
@@ -45,3 +46,15 @@ graalvmNative {
         }
     }
 }
+
+spotless {
+    java {
+        googleJavaFormat("1.28.0")
+        target("src/**/*.java")
+    }
+}
+
+tasks.named("check") {
+    dependsOn("spotlessCheck")
+}
+
