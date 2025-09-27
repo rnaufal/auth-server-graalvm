@@ -135,7 +135,7 @@ class AuthorizationServerIntegrationTest {
     var jwt = JWTParser.parse(accessToken);
     var claims = jwt.getJWTClaimsSet();
 
-    assertThat(expiresIn).isEqualTo(3599L);
+    assertThat(expiresIn).isEqualTo(3599);
 
     long tokenLifetimeSeconds =
         claims.getExpirationTime().toInstant().getEpochSecond()
