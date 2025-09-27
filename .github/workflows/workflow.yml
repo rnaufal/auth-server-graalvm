@@ -43,6 +43,9 @@ jobs:
   tests:
     name: Run Tests
     runs-on: ubuntu-latest
+    permissions:
+      checks: write
+      actions: read
     needs: code-quality
 
     steps:
